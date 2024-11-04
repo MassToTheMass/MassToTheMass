@@ -1,4 +1,14 @@
+
+body {
+    background-color: white;
+}
 #page {
-    width: 1000px;
+    width: 500px;
     margin: auto;
+    background-color: beige;
+}
+#navigation {
+    width: 80%;
+    background-color: lightblue;
+    float: left;
 }
