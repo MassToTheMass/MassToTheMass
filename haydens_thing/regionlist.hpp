@@ -1,4 +1,3 @@
-
 #include "statelist.hpp"
 #include <iostream>
 #include <string>

@@ -1,4 +1,3 @@
-
 #ifndef MEET_STORAGE_HPP
 #define MEET_STORAGE_HPP
 

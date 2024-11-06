@@ -21,6 +21,9 @@ int main(){
         if(choices.length() == 1){
             choice = choices[0];
         }
+        else{
+            choice = 'x';
+        }
         if(choice == 'c'){
 
             std::string mn, date, file, l;
