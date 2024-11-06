@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+}
+
+#box-thing {
+    width: 80%;
+    background-color: white;
+}
+#link-panel {
+    background-image: linear-gradient(red 20%, black);
+    float: left;
+    float: none;
+    width: 250px;
+}
