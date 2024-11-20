@@ -31,12 +31,15 @@ int main(){
             std::cout << "Enter the name of your results file: " << std::endl;
             std::cin >> file;
             meets.create(l, mn, date, file);
+            system("clear");
         }
 
         else if(choices == "meet"){ //display specific meet
             std::string meetName;
             std::cout << "Enter meet name: " <<std::endl;
             std::cin >> meetName;
+
+            system("clear");
             
             meets.displayEvent(meetName);
         }
