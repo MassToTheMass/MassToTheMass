@@ -10,7 +10,6 @@ int main(){
     MeetStore meets;
     std::string choices;
     while(true) { //options to operate the prograM
-        std::cin.clear();
         std::cout << "What would you like to perform:" << std::endl
                   << "Create: Create meet" << std::endl 
                   << "Meet: Display meet" << std::endl
@@ -32,7 +31,6 @@ int main(){
             std::cout << "Enter the name of your results file: " << std::endl;
             std::cin >> file;
             meets.create(l, mn, date, file);
-            break;
         }
 
         else if(choices == "meet"){ //display specific meet
@@ -41,12 +39,10 @@ int main(){
             std::cin >> meetName;
             
             meets.displayEvent(meetName);
-            break;
         }
 
         else if(choices == "all meets"){ //display all meets
             meets.displayAll();
-            break;
         }
 
         else if(choices == "athlete"){ // display a specific athlete within a specific meet
@@ -56,15 +52,15 @@ int main(){
             std::cout << "What is the athletes name: " << std::endl;
             std::cin >> athleteName;
             meets.athleteScore(meetName, athleteName);
-            break;
+
         }
 
         else if(choices == "all athletes"){ //display every athlete in every meet systematically for results comparison by standardized time
             meets.displayAllAthletes();
-            break;
+        
         }
         else if(choices == "quit") { //exit the program
-            break;
+
         }
         else{ //handles incorrect user input here
             std::cout << "Not a choice!" << std::endl;
