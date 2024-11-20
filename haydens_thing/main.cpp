@@ -3,6 +3,7 @@
 #include "event.hpp"
 #include "athlete.hpp"
 #include <algorithm>
+#include <cstdlib>
 
 int main(){
     //initialize storage system
@@ -19,6 +20,7 @@ int main(){
                   << "Quit: Quit Program :(" << std::endl;
         std::getline(std::cin, choices);
         std::transform(choices.begin(), choices.end(), choices.begin(), ::tolower);
+        system("clear");
         if(choices == "create"){ //create a meet
             std::string mn, date, file, l;
             std::cout << "Enter the meet name with no spaces: " << std::endl;
