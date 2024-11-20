@@ -17,7 +17,8 @@ int main(){
                   << "All Athletes: Display all athletes" << std::endl
                   << "Quit: Quit Program :(" << std::endl;
         std::getline(std::cin, choices);
-        if(choices == 'create'){ //create a meet
+        std::transform(choices.begin(), choices.end(), choices.begin(), ::tolower);
+        if(choices == "create"){ //create a meet
             std::string mn, date, file, l;
             std::cout << "Enter the meet name with no spaces: " << std::endl;
             std::cin >> mn; 
@@ -30,8 +31,7 @@ int main(){
             meets.create(l, mn, date, file);
         }
 
-        else if(choices == 'Meet'){ //display specific meet
-
+        else if(choices == "meet"){ //display specific meet
             std::string meetName;
             std::cout << "Enter meet name: " <<std::endl;
             std::cin >> meetName;
@@ -39,25 +39,23 @@ int main(){
             meets.displayEvent(meetName);
         }
 
-        else if(choices == 'All Meets'){ //display all meets
+        else if(choices == "all meets"){ //display all meets
             meets.displayAll();
         }
 
-        else if(choices == 'Athlete'){ // display a specific athlete within a specific meet
+        else if(choices == "athlete"){ // display a specific athlete within a specific meet
             std::string meetName, athleteName;
             std::cout << "What is the meet name: " << std::endl;
             std::cin >> meetName;
             std::cout << "What is the athletes name: " << std::endl;
             std::cin >> athleteName;
             meets.athleteScore(meetName, athleteName);
-
         }
 
-        else if(choices == 'All Athletes'){ //display every athlete in every meet systematically for results comparison by standardized time
+        else if(choices == "all athletes"){ //display every athlete in every meet systematically for results comparison by standardized time
             meets.displayAllAthletes();
         }
-
-        else if(choices == 'Quit') { //exit the program
+        else if(choices == "quit") { //exit the program
             break;
         }
         else{ //handles incorrect user input here
