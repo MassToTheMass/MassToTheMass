@@ -9,6 +9,7 @@ int main(){
     MeetStore meets;
     std::string choices;
     while(true) { //options to operate the prograM
+        std::cin.clear();
         std::cout << "What would you like to perform:" << std::endl
                   << "Create: Create meet" << std::endl 
                   << "Meet: Display meet" << std::endl
