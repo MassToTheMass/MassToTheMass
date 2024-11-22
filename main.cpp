@@ -10,6 +10,7 @@
 int main(){
     //initialize storage system
     MeetStore meets;
+
     std::string choices;
     while(true) { 
         

@@ -3,7 +3,7 @@
 namespace str {
     enum WhichText { USERCHOICES, NAME, RACEL, MEETD, RESULTSFILE, MEETNAME, ATHLETENAME, BADCHOICE };
 
-    std::string user_choices = 
+    std::string user_choices = "\n"
         "What would you like to perform:\n"
         "Create: Create meet\n"
         "Meet: Display meet\n"
