@@ -1,245 +1,123 @@
 ayden_lee 16:22 Viewmont
-
 ethan_warnock 16:32 Viewmont
-
 tanner_macias 16:34 Maple_Mountain
-
 preston_sumsion 16:35 Maple_Mountain
-
 felix_pexton 16:36 Viewmont
-
 parker_davis 16:39 Maple_Mountain
-
 junah_overson 16:43 Viewmont
-
 micah_hooper 17:02 Viewmont
-
 tyler_teemant 17:03 Timpview
-
 weston_mccormack 17:05 Viewmont
-
 nicolas_placido 17:05 Viewmont
-
 hyrum_elder 17:06 Viewmont
-
 brennon_tippets 17:08 Maple_Mountain
-
 thomas_mackay 17:12 Viewmont
-
 landon_smith 17:14 Maple_Mountain
-
 will_hyde 17:18 Viewmont
-
 luke_walsh 17:20 Alta
-
 spencer_lewis 17:21 Viewmont
-
 addison_waite 17:21 Northridge
-
 tanner_kawa 17:22 Timpview
-
 jacob_allen 17:27 Maple_Mountain
-
 ryder_mccune 17:35 Timpview
-
 draegen_kunkel 17:36 Alta
-
 eldon_blake 17:37 Timpview
-
 wally_paulsen 17:38 Springville
-
 asher_gunderson 17:39 Maple_Mountain
-
 gavin_gull 17:42 Maple_Mountain
-
 jason_rowser 17:44 Wasatch
-
 andrew_fisher 17:46 Springville
-
 josh_smith 17:48 Timpview
-
 joshua_reynolds 17:52 Springville
-
 jay_remington 17:55 Viewmont
-
 ashton_hall 18:00 Viewmont
-
 brady_petersen 18:01 Springville
-
 shaffer_rohatinsky 18:02 Maple_Mountain
-
 jacob_gehring 18:04 Viewmont
-
 michael_alder 18:06 Timpview
-
 colin_silvey 18:06 Springville
-
 cameron_judd 18:07 Springville
-
 gavin_myers 18:08 Viewmont
-
 parker_ewell 18:10 Northridge
-
 laker_ferguson 18:12 Alta
-
 andrew_martin 18:12 Viewmont
-
 corbin_price 18:17 Springville
-
 clark_hanley 18:17 Alta
-
 lincoln_frandsen 18:19 Timpview
-
 hyrum_bush 18:20 Viewmont
-
 owen_young 18:22 Maple_Mountain
-
 peter_woolston 18:23 Spanish_Fork
-
 theodore_dunn 18:30 Springville
-
 wade_parker 18:32 Spanish_Fork
-
 jacob_dummar 18:33 Wasatch
-
 madden_moore 18:35 Taylorsville
-
 jaden_mackert 18:36 Springville
-
 gabe_jardine 18:36 Viewmont
-
 connor_whitney 18:36 Springville
-
 will_reid 18:37 Timpview
-
 andrew_struyk 18:37 Alta
-
 george_huff 18:42 Timpview
-
 isaiah_lainhart 18:43 Maple_Mountain
-
 brendan_mcclean 18:44 Springville
-
 parker_sims 18:48 Alta
-
 jude_luekenga 18:51 Bountiful
-
 daniel_page 18:52 Viewmont
-
 theo_holt 18:54 Bountiful
-
 dylan_hall 18:54 Viewmont
-
 jared_garrett 18:54 Maple_Mountain
-
 zachary_carnett 18:56 Northridge
-
 dex_booth 18:56 Viewmont
-
 porter_sumsion 18:57 Maple_Mountain
-
 luke_hyde 18:58 Viewmont
-
 dylan_henry 19:00 Maple_Mountain
-
 jackson_brown 19:02 Springville
-
 corban_rockwood 19:03 Spanish_Fork
-
 tristen_jones 19:04 Alta
-
 graham_johnson 19:04 Maple_Mountain
-
 carson_christian 19:05 Springville
-
 miles_welch 19:06 Timpview
-
 brandon_sundell 19:08 Maple_Mountain
-
 bowen_fletcher 19:10 Springville
-
 chet_baker 19:11 Maple_Mountain
-
 beckett_barlow 19:13 Bountiful
-
 thomas_kent 19:13 Springville
-
 matthew_archer 19:16 Alta
-
 alvin_bello 19:17 Taylorsville
-
 saul_weeks 19:18 Timpview
-
 cole_larsen 19:18 Maple_Mountain
-
 quinten_jones 19:18 Timpview
-
 calvin_craig 19:19 Timpview
-
 evan_richards 19:19 Bountiful
-
 noah_wright 19:20 Taylorsville
-
 chad_collings 19:20 Alta
-
 deacon_dalton 19:21 Taylorsville
-
 stephen_bentley 19:23 Northridge
-
 leander_mazzeo 19:25 Timpview
-
 james_fleming 19:27 Springville
-
 spencer_wilson 19:28 Springville
-
 andres_rodriguez 19:29 Taylorsville
-
 brennan_dawson 19:30 Northridge
-
 titus_weeks 19:37 Timpview
-
 ben_lawson 19:38 Wasatch
-
 teagan_farrer 19:38 Springville
-
 daniel_anderson 19:39 Springville
-
 michael_griffith 19:39 Northridge
-
 adam_cerny 19:40 Timpview
-
 oscar_jensen 19:41 Taylorsville
-
 ashton_rounds 19:43 Maple_Mountain
-
 carson_agren 19:46 Northridge
-
 joey_eliason 19:48 Viewmont
-
 soren_johnson 19:48 Bountiful
-
 emerson_cates 19:48 Timpview
-
 daeman_edwards 19:51 Wasatch
-
 spencer_balagna 19:52 Springville
-
 james_crandall 19:55 Viewmont
-
 scott_lewis 19:56 Maple_Mountain
-
 alex_reynolds 19:59 Taylorsville
-
 wyatt_thurgood 20:06 Viewmont
-
 aaron_george 20:08 Viewmont
-
 dean_blakey 20:11 Springville
-
 benjamin_skinner 20:11 Springville
-
 preston_ballard 20:14 Springville
-
 jeremiah_mckean 20:19 Northridge
-
 carter_hawks 20:21 Springville

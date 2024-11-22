@@ -25,13 +25,13 @@ int main(){
         if(choices == "create"){ //create a meet
             std::string mn, date, file, l;
             std::cout << "Enter the meet name with no spaces: " << std::endl;
-            std::cin >> mn; 
+            std::getline(std::cin, mn);
             std::cout << "Enter the race length in miles: " << std::endl;
-            std::cin >> l;
+            std::getline(std::cin, l);
             std::cout << "Enter the meet date: " << std::endl;
-            std::cin >> date;
+            std::getline(std::cin, date);
             std::cout << "Enter the name of your results file: " << std::endl;
-            std::cin >> file;
+            std::getline(std::cin, file);
             meets.create(l, mn, date, file);
             system("clear");
         }
@@ -58,6 +58,8 @@ int main(){
             std::cin >> athleteName;
             meets.athleteScore(meetName, athleteName);
 
+            system("clear");
+
         }
 
         else if(choices == "all athletes"){ //display every athlete in every meet systematically for results comparison by standardized time
@@ -68,7 +70,7 @@ int main(){
             break;
         }
         else{ //handles incorrect user input here
-            std::cout << "Not a choice!" << std::endl;
+            std::cout << "That is not a listed choice, try cheking your spelling." << std::endl;
         }
     }
     return 0;
