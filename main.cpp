@@ -39,7 +39,7 @@ int main(){
         else if(choices == "meet"){ //display specific meet
             std::string meetName;
             std::cout << "Enter meet name: " <<std::endl;
-            std::cin >> meetName;
+            std::getline(std::cin, meetName);
 
             system("clear");
             
@@ -53,9 +53,9 @@ int main(){
         else if(choices == "athlete"){ // display a specific athlete within a specific meet
             std::string meetName, athleteName;
             std::cout << "What is the meet name: " << std::endl;
-            std::cin >> meetName;
+            std::getline(std::cin, meetName);
             std::cout << "What is the athletes name: " << std::endl;
-            std::cin >> athleteName;
+            std::getline(std::cin, athleteName);
             meets.athleteScore(meetName, athleteName);
 
             system("clear");
