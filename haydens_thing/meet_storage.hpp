@@ -1,10 +1,11 @@
 #ifndef MEET_STORAGE_HPP
 #define MEET_STORAGE_HPP
 
-
+#include <fstream>
 #include <iostream>
 #include <unordered_map>
 #include "event.hpp"
+
 //meet store class is a storage system for the events allowing for editing and accessing of events and the athletes within those events and within the state_list
 class MeetStore {
 private: 
@@ -47,6 +48,19 @@ public:
             pair.second.meetDisplayAthletes();
             std::cout << "-------------------" << std::endl;
         }
+    }
+
+    void saveMeetData() {
+
+        std::string save_data_str = "";
+
+        for (auto it = events.begin(); it != events.end(); ++it) {
+            save_data_str += it->first + ":" + it->second;
+        }
+
+        std::ofstream saveFile("race_data/filename.txt");
+        saveFile << "Files can be tricky, but it is fun enough!";
+        saveFile.close();
     }
 };
 
