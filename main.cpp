@@ -1,9 +1,10 @@
 #include <iostream>
-#include "meet_storage.hpp"
-#include "event.hpp"
-#include "athlete.hpp"
+#include "haydens_thing/meet_storage.hpp"
+#include "haydens_thing/event.hpp"
+#include "haydens_thing/athlete.hpp"
 #include <algorithm>
 #include <cstdlib>
+#include <stdio.h>
 
 int main(){
     //initialize storage system
@@ -64,7 +65,7 @@ int main(){
         
         }
         else if(choices == "quit") { //exit the program
-
+            break;
         }
         else{ //handles incorrect user input here
             std::cout << "Not a choice!" << std::endl;
