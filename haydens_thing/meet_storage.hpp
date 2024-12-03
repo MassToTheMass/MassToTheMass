@@ -59,7 +59,7 @@ public:
 
     void displayEvent(const std::string& eventName) { //display more in depth analysis of a specific event
         if(events.count(eventName)) {
-            events.at(eventName).printStats();
+            events.at(eventName).printStats(events.at(eventName).results);
         } else {
             std::cout << "This meet does not exist" << std::endl; 
         }
