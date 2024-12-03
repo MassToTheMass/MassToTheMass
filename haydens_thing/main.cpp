@@ -35,7 +35,7 @@ int main(){
 
         else if(choices == "meet"){ //display specific meet
             std::string meetName;
-            std::cout << "Enter meet name: " <<std::endl;
+            std::cout << "Enter meet name: " << std::endl;
             std::cin >> meetName;
             
             meets.displayEvent(meetName);
