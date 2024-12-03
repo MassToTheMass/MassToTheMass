@@ -13,10 +13,10 @@ class Event {
 private:
     std::string course_len;
     std::string date;
-    std::string results;
     std::unordered_map<std::string, Athlete> athletes; //dictionary holding each athletes name and its instance for automatic creation and individual manipulation
 
 public:
+    std::string results;
     std::string name;
     Event() : name(""), course_len(""), date(""), results("") {}
     Event(std::string n, std::string r) : name(n), results(r) {} //This one is for the files we already have
@@ -28,9 +28,9 @@ public:
         std::ifstream race_results(file_name);
 
         std::string line;
-        for (std::getline(file_name, line)) {
-            
-        }
+        // for (std::getline(race_results, line)) {
+        //     std::cout << line << std::endl;
+        // }
 
     }
 
