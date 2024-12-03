@@ -8,7 +8,7 @@
 //meet store class is a storage system for the events allowing for editing and accessing of events and the athletes within those events and within the state_list
 class MeetStore {
 private: 
-    std::unordered_map<std::string, Event> events;
+    std::unordered_map<std::string, Event> events; 
 
 public:
     MeetStore() { // initialize the events with events we have already made
