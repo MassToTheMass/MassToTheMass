@@ -1,50 +1,17 @@
 #ifndef MEET_STORAGE_HPP
 #define MEET_STORAGE_HPP
 
-#include <fstream>
+
 #include <iostream>
 #include <unordered_map>
 #include "event.hpp"
-
 //meet store class is a storage system for the events allowing for editing and accessing of events and the athletes within those events and within the state_list
 class MeetStore {
 private: 
     std::unordered_map<std::string, Event> events;
 
 public:
-    MeetStore() { // initialize the events with events we have already made
-
-        std::ifstream file("haydens_thing/race_data/file_map.txt");
-
-        if (!file.is_open()) { std::cerr << "Failed to open file." << std::endl; }
-
-        std::string line;
-        while (std::getline(file, line)) { // Read line by line
-
-            std::cout << line;
-
-            std::string file_name = "";
-            std::string race_name = "";
-
-            std::string* current_string = &file_name;
-
-            for (int i = 0; i < line.size(); i++) {
-                if (line[i] == ':') {
-                    current_string = &race_name;
-                } else {
-                    *current_string += line[i];
-                }
-            }
-        
-            events[race_name] = Event(race_name, file_name);
-
-        }
-
-        for (auto it = events.begin(); it != events.end(); ++it) { 
-            std::cout << "Key: " << it->first << std::endl;
-        }
-
-    }
+    MeetStore() {}
 
     void create(std::string l, std::string mn, std::string date, std::string file) { //create a event and add it to the storage system so it can be displayed and accessed 
         Event meet(mn, l, date, file);
@@ -80,20 +47,6 @@ public:
             pair.second.meetDisplayAthletes();
             std::cout << "-------------------" << std::endl;
         }
-    }
-
-    void saveMeetData() {
-
-        std::string save_data_str = "";
-
-        for (auto it = events.begin(); it != events.end(); ++it) {
-            // filename:meet name
-            save_data_str += it->first + ":" + it->second.name + "\n";
-        }
-
-        std::ofstream saveFile("haydens_thing/race_data/filename.txt");
-        saveFile << save_data_str;
-        saveFile.close();
     }
 };
 

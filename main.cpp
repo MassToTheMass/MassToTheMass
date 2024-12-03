@@ -20,8 +20,11 @@ int main(){
         std::cout << str::getUserRequest(str::USERCHOICES) << std::endl;
         std::getline(std::cin, choices);
         std::transform(choices.begin(), choices.end(), choices.begin(), ::tolower);
+<<<<<<< HEAD:haydens_thing/main.cpp
+=======
         system("clear");
 
+>>>>>>> origin/main:main.cpp
         if(choices == "create"){ //create a meet
             std::string mn, date, file, l;
             std::cout << str::getUserRequest(str::MEETNAME) << std::endl;
