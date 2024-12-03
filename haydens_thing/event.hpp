@@ -25,12 +25,12 @@ public:
     void printStats(std::string file_name) { //print the details of the meet so the variables can remain private. 
         std::cout << "Name: " << name << " --- Course Length: " << course_len << " --- Date of meet: " << date << std::endl;
 
-        std::ifstream race_results(file_name);
+        std::ifstream race_results("haydens_thing/race_data/" + file_name + ".txt");
 
         std::string line;
-        // for (std::getline(race_results, line)) {
-        //     std::cout << line << std::endl;
-        // }
+        while (std::getline(race_results, line)) {
+            std::cout << line << std::endl;
+        }
 
     }
 
