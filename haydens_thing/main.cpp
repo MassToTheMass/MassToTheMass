@@ -4,7 +4,7 @@
 #include "athlete.hpp"
 #include <algorithm>
 #include <cstdlib>
-
+ 
 int main(){
     //initialize storage system
     MeetStore meets;
