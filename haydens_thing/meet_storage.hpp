@@ -11,7 +11,39 @@ private:
     std::unordered_map<std::string, Event> events;
 
 public:
-    MeetStore() {}
+    MeetStore() { // initialize the events with events we have already made
+
+        std::ifstream file("haydens_thing/race_data/file_map.txt");
+
+        if (!file.is_open()) { std::cerr << "Failed to open file." << std::endl; }
+
+        std::string line;
+        while (std::getline(file, line)) { // Read line by line
+
+            std::cout << line;
+
+            std::string file_name = "";
+            std::string race_name = "";
+
+            std::string* current_string = &file_name;
+
+            for (int i = 0; i < line.size(); i++) {
+                if (line[i] == ':') {
+                    current_string = &race_name;
+                } else {
+                    *current_string += line[i];
+                }
+            }
+        
+            events[race_name] = Event(race_name, file_name);
+
+        }
+
+        for (auto it = events.begin(); it != events.end(); ++it) { 
+            std::cout << "Key: " << it->first << std::endl;
+        }
+
+    }
 
     void create(std::string l, std::string mn, std::string date, std::string file) { //create a event and add it to the storage system so it can be displayed and accessed 
         Event meet(mn, l, date, file);
