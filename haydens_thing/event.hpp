@@ -22,8 +22,16 @@ public:
     Event(std::string n, std::string r) : name(n), results(r) {} //This one is for the files we already have
     Event(std::string n, std::string len, std::string d, std::string r) : name(n), course_len(len), date(d), results(r) {}
 
-    void printStats() { //print the details of the meet so the variables can remain private. 
+    void printStats(std::string file_name) { //print the details of the meet so the variables can remain private. 
         std::cout << "Name: " << name << " --- Course Length: " << course_len << " --- Date of meet: " << date << std::endl;
+
+        std::ifstream race_results(file_name);
+
+        std::string line;
+        for (std::getline(file_name, line)) {
+            
+        }
+
     }
 
     int string_seconds(const std::string& seconds) { //turns a string of mm:ss into a integer of just seconds
