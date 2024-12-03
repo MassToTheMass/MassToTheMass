@@ -13,18 +13,13 @@ int main(){
 
     std::string choices;
     while(true) { 
-        
-        //options to operate the prograM
-
+        //options to operate the program
         std::cin.clear();
         std::cout << str::getUserRequest(str::USERCHOICES) << std::endl;
         std::getline(std::cin, choices);
         std::transform(choices.begin(), choices.end(), choices.begin(), ::tolower);
-<<<<<<< HEAD:haydens_thing/main.cpp
-=======
         system("clear");
 
->>>>>>> origin/main:main.cpp
         if(choices == "create"){ //create a meet
             std::string mn, date, file, l;
             std::cout << str::getUserRequest(str::MEETNAME) << std::endl;
@@ -43,9 +38,7 @@ int main(){
             std::string meetName;
             std::cout << str::getUserRequest(str::MEETNAME) << std::endl;
             std::getline(std::cin, meetName);
-
             system("clear");
-            
             meets.displayEvent(meetName);
         }
 
@@ -60,14 +53,11 @@ int main(){
             std::cout << str::getUserRequest(str::ATHLETENAME) << std::endl;
             std::getline(std::cin, athleteName);
             meets.athleteScore(meetName, athleteName);
-
             system("clear");
-
         }
 
         else if(choices == "all athletes"){ //display every athlete in every meet systematically for results comparison by standardized time
             meets.displayAllAthletes();
-        
         }
         else if(choices == "quit") { //exit the program
             break;
