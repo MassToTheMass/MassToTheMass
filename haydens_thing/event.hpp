@@ -117,13 +117,14 @@ public:
     }
 
     void meetDisplayAthletes(){ //display all athletes within this event
-        for(auto& pair : athletes) {
-            Athlete* athlete = findAthlete(pair.first);
-            pair.second.displayDetails(standardizedTime(athlete->personalBest()));
-            std::cout << "-------------------" << std::endl;
 
+        std::ifstream file("haydens_thing/race_data/" + results + ".txt");
+        std::string line;
+
+        while (std::getline(file, line)) {
+            std::cout << line << std::endl;
         }
-
+        file.close();
     }
 };
 
