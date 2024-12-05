@@ -3,7 +3,7 @@
 #include "haydens_thing/event.hpp"
 #include "haydens_thing/athlete.hpp"
 #include "funcs/string_storage.hpp"
-#include "athlete_storage.hpp"
+#include "haydens_thing/athlete_storage.hpp"
 #include <algorithm>
 #include <cstdlib>
 #include <stdio.h>
@@ -59,7 +59,7 @@ int main(){
         }
 
         else if(choices == "all athletes"){ //display every athlete in every meet systematically for results comparison by standardized time
-            meets.displayAllAthletes();
+            athletes.displayAllAthletes();
         }
         else if(choices == "quit") { //exit the program
             break;

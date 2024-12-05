@@ -11,10 +11,10 @@ std::vector<std::string> parseLine(std::string, char);
 class AthleteStore {
     private:
         bool checkForExistingAthlete(std::string);
-        void displayAllAthletes();
 
     public:
         std::map<std::string, Athlete> athletes = {}; // Athlete name - Athlete class
+        void displayAllAthletes();
         AthleteStore() {
             // algorithm for creating unique athletes goes in this constructor
             
