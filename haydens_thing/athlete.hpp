@@ -7,12 +7,14 @@
 //athlete class is created for each athlete found in a results list inputted into the meet, currently each meet creates individual athletes, it was not necisarry for the problem to merge athletes but I will in the future when I have more than 3 days. 
 class Athlete : public State {
 private:
+    std::string name;
     std::string team;
     std::vector<int> records;
     std::unordered_map<std::string, int> times;
     int grade;
 
 public:
+    Athlete(std::string n) : name(n), team(""), grade(0) {} // add more vars to this as we expand the data we can obtain with athletestorage
     Athlete() : team(""), grade(0) {}
     Athlete(std::string t, int g, std::string names) : State(names), team(t), grade(g) {}
 
@@ -48,6 +50,13 @@ public:
 
     void updateTeam(const std::string& newTeam) { //updates athlete team
         team = newTeam;
+    }
+
+    friend std::ostream& operator<< (std::ostream& os, const Athlete& athlete) {
+        os << "Name: " << athlete.name 
+        << "\nTeam: " << athlete.team 
+        << "\nGrade: " << athlete.grade;
+        return os;
     }
 };
 #endif

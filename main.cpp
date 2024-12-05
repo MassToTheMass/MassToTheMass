@@ -3,6 +3,7 @@
 #include "haydens_thing/event.hpp"
 #include "haydens_thing/athlete.hpp"
 #include "funcs/string_storage.hpp"
+#include "athlete_storage.hpp"
 #include <algorithm>
 #include <cstdlib>
 #include <stdio.h>
@@ -10,6 +11,7 @@
 int main(){
     //initialize storage system
     MeetStore meets;
+    AthleteStore athletes;
 
     std::string choices;
     while(true) { 

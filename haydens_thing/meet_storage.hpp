@@ -61,7 +61,7 @@ public:
         if(events.count(eventName)) {
             events.at(eventName).printStats(events.at(eventName).results);
         } else {
-            std::cout << "This meet does not exist" << std::endl; 
+            std::cout << "This meet does not exist" << std::endl;
         }
     }
 
