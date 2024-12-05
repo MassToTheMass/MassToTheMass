@@ -11,6 +11,7 @@ std::vector<std::string> parseLine(std::string, char);
 class AthleteStore {
     private:
         bool checkForExistingAthlete(std::string);
+        void displayAllAthletes();
 
     public:
         std::map<std::string, Athlete> athletes = {}; // Athlete name - Athlete class
@@ -30,7 +31,7 @@ class AthleteStore {
                 while (std::getline(current_race, current_racer)) {
                     std::vector<std::string> athlete_time = parseLine(current_racer, ' ');
                     std::string athlete_name = athlete_time[0];
-                    if (checkForExistingAthlete(athlete_name)) {
+                    if (!checkForExistingAthlete(athlete_name)) {
                         athletes[athlete_name] = Athlete(athlete_name);
                     } else {
                         // add the race to the said athlete's data
@@ -40,6 +41,16 @@ class AthleteStore {
         }
 };
 
+void AthleteStore::displayAllAthletes() {
+    std::map<std::string, Athlete>::iterator first = athletes.begin();
+    std::map<std::string, Athlete>::iterator last = athletes.end();
+
+    while (first != last) {
+        std::cout << first->second << std::endl;
+        ++first;
+    }
+}
+
 bool AthleteStore::checkForExistingAthlete(std::string athlete_name) {
     std::map<std::string, Athlete>::iterator first = athletes.begin();
     std::map<std::string, Athlete>::iterator last = athletes.end();
@@ -47,9 +58,11 @@ bool AthleteStore::checkForExistingAthlete(std::string athlete_name) {
     while (first != last) {
         if (athlete_name == first->first) {
             // add athlete's time to their records, don't make a new one
+            return 1;
         }
-
+        ++first;
     }
+    return 0;
 }
 
 std::vector<std::string> parseLine(std::string line, char delim) {
