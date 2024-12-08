@@ -49,12 +49,10 @@ int main(){
         }
 
         else if(choices == "athlete"){ // display a specific athlete within a specific meet
-            std::string meetName, athleteName;
-            std::cout << str::getUserRequest(str::MEETNAME) << std::endl;
-            std::getline(std::cin, meetName);
+            std::string athleteName;
             std::cout << str::getUserRequest(str::ATHLETENAME) << std::endl;
             std::getline(std::cin, athleteName);
-            meets.athleteScore(meetName, athleteName);
+            athletes.getAthlete(athleteName);
             system("clear");
         }
 
