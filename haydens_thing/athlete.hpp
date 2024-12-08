@@ -18,6 +18,14 @@ public:
     Athlete() : team(""), grade(0) {}
     Athlete(std::string t, int g, std::string names) : State(names), team(t), grade(g) {}
 
+    std::string getTeam() {
+        return team;
+    }
+
+    int getGrade() {
+        return grade;
+    }
+
     void addTime(int time, const std::string& meet) { //add a time to the athlete, used when initializing the athletes to add in their time from the meet to their results list. 
         times[meet] = time;
         records.push_back(time);

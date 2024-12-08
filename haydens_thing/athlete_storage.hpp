@@ -11,10 +11,12 @@ std::vector<std::string> parseLine(std::string, char);
 class AthleteStore {
     private:
         bool checkForExistingAthlete(std::string);
+        std::vector<Athlete> findExistingAthlete(std::string);
 
     public:
         std::map<std::string, Athlete> athletes = {}; // Athlete name - Athlete class
         void displayAllAthletes();
+        Athlete getAthlete(std::string name);
         AthleteStore() {
             // algorithm for creating unique athletes goes in this constructor
             std::cout << "Constructing" << std::endl;
@@ -43,6 +45,37 @@ class AthleteStore {
             }
         }
 };
+
+std::vector<Athlete> AthleteStore::findExistingAthlete(std::string name) {
+    std::map<std::string, Athlete>::iterator first = athletes.begin();
+    std::map<std::string, Athlete>::iterator last = athletes.end();
+
+    std::vector<Athlete> matching_athletes = {};
+
+
+    while (first != last) {
+        if (first->first == name) {
+            matching_athletes.push_back(first->first);
+        }
+        ++first;
+    }
+
+    return matching_athletes;
+}
+
+Athlete AthleteStore::getAthlete(std::string name) { 
+    std::vector<Athlete> athlete_list = findExistingAthlete();
+
+    if (athlete_list.size() != 0) {
+        std::map<std::string, Athlete>::iterator first = athletes.begin();
+        std::map<std::string, Athlete>::iterator last = athletes.end();
+        int i = 1;
+
+        while (first != last) {
+            std::cout << first->second << std::endl;
+        }
+    }
+}
 
 void AthleteStore::displayAllAthletes() {
     std::map<std::string, Athlete>::iterator first = athletes.begin();
