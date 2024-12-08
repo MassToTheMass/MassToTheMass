@@ -2,12 +2,14 @@
 #include "meet_storage.hpp"
 #include "event.hpp"
 #include "athlete.hpp"
+#include "athlete_storage.hpp"
 #include <algorithm>
 #include <cstdlib>
  
 int main(){
     //initialize storage system
     MeetStore meets;
+    AthleteStore athletes;
     std::string choices;
     while(true) { //options to operate the prograM
         std::cin.clear();
@@ -56,7 +58,7 @@ int main(){
         }
 
         else if(choices == "all athletes"){ //display every athlete in every meet systematically for results comparison by standardized time
-            meets.displayAllAthletes();
+            athletes.displayAllAthletes();
         
         }
         else if(choices == "quit") { //exit the program

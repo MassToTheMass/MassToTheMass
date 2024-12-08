@@ -17,11 +17,14 @@ class AthleteStore {
         void displayAllAthletes();
         AthleteStore() {
             // algorithm for creating unique athletes goes in this constructor
+            std::cout << "Constructing" << std::endl;
             
-            std::ifstream file_map("file_map.txt");
+            std::ifstream file_map("haydens_thing/race_data/file_map.txt");
             std::string line;
             
             while (std::getline(file_map, line)) {
+
+                std::cout << "File looping" << std::endl;
 
                 std::vector<std::string> current_line_vector = parseLine(line, ':');
 
