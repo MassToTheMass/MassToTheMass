@@ -52,8 +52,8 @@ int main(){
             std::string athleteName;
             std::cout << str::getUserRequest(str::ATHLETENAME) << std::endl;
             std::getline(std::cin, athleteName);
-            athletes.getAthlete(athleteName);
             system("clear");
+            athletes.getAthlete(athleteName);
         }
 
         else if(choices == "all athletes"){ //display every athlete in every meet systematically for results comparison by standardized time

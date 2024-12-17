@@ -19,14 +19,11 @@ class AthleteStore {
         Athlete* getAthlete(std::string name);
         AthleteStore() {
             // algorithm for creating unique athletes goes in this constructor
-            std::cout << "Constructing" << std::endl;
             
             std::ifstream file_map("haydens_thing/race_data/file_map.txt");
             std::string line;
             
             while (std::getline(file_map, line)) {
-
-                std::cout << "File looping" << std::endl;
 
                 std::vector<std::string> current_line_vector = parseLine(line, ':');
 
@@ -38,10 +35,12 @@ class AthleteStore {
                     std::vector<std::string> split_name = parseLine(athlete_time[0], '_');
                     std::string athlete_name = "";
                     for (int i = 0; i < split_name.size(); i++) {
-                        if (split_name.size() = i - 1) {
-                            athlete_name += split_name[i];
+                        std::string current_name = split_name[i];
+                        std::transform(current_name.begin(), current_name.end(), current_name.begin(), ::tolower);
+                        if (split_name.size() == i - 1) {
+                            athlete_name += current_name;
                         } else {
-                            athlete_name += split_name[i] + " ";
+                            athlete_name += current_name + " ";
                         }
                     }
                     
@@ -61,17 +60,18 @@ std::vector<Athlete> AthleteStore::findExistingAthlete(std::string name) {
 
     std::vector<Athlete> matching_athletes = {};
 
-    std::cout << name << std::endl;
+    std::string current_name;
+    name.erase(std::remove_if(name.begin(), name.end(), ::isspace), name.end());
 
     while (first != last) {
-        std::cout<< first->first << std::endl;
 
-        if (first->first == name) {
+        current_name = first->first;
+        current_name.erase(std::remove_if(current_name.begin(), current_name.end(), ::isspace), current_name.end());
+
+        if (current_name == name) {
             matching_athletes.push_back(first->first);
         }
         ++first;
-        std::string tempvar;
-        std::cin >> tempvar;
     }
 
     return matching_athletes;
@@ -82,14 +82,17 @@ Athlete* AthleteStore::getAthlete(std::string name) {
 
     if (athlete_list.size() != 0) {
 
-        std::cout << "list exists" << std::endl;
+        if (athlete_list.size() == 1) {
+            return &athlete_list.at(0);
+        } else {
 
-        std::map<std::string, Athlete>::iterator first = athletes.begin();
-        std::map<std::string, Athlete>::iterator last = athletes.end();
+        std::vector<Athlete>::iterator first = athlete_list.begin();
+        std::vector<Athlete>::iterator last = athlete_list.end();
         int i = 1;
 
         while (first != last) {
-            std::cout << first->second << std::endl;
+            std::cout << *first << std::endl;
+            ++first;
         }
 
         std::cout << "Type the number of the Athlete you would like to see" << std::endl;
@@ -97,14 +100,15 @@ Athlete* AthleteStore::getAthlete(std::string name) {
         std::string num;
         std::getline(std::cin, num);
 
-        first = athletes.begin();
+        first = athlete_list.begin();
         for (int i = 1; i < std::stoi(num); i++) {
             if (first == last) {
                 return nullptr;
             }
             ++first;
         }
-        return &first->second;
+        return &*first;
+    }
     }
     return nullptr;
 }
@@ -147,5 +151,5 @@ std::vector<std::string> parseLine(std::string line, char delim) {
 }
 
 std::string injectUnderScore(std::string name) {
-
+    return "";
 }
