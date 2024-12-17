@@ -60,8 +60,9 @@ public:
         team = newTeam;
     }
 
-    void dislplayAllAthleteInformation() {
+    std::string dislplayAllAthleteInformation() {
         // function to display everhtkng: name, grade, team, best time, all races they participate in
+        return "information about the athlete";
     }
 
     friend std::ostream& operator<< (std::ostream& os, const Athlete& athlete) {
