@@ -40,14 +40,16 @@ class AthleteStore {
                         if (split_name.size() == i - 1) {
                             athlete_name += current_name;
                         } else {
-                            athlete_name += current_name + " ";
+                            athlete_name += current_name + " "; 
                         }
                     }
                     
                     if (!checkForExistingAthlete(athlete_name)) {
                         athletes[athlete_name] = Athlete(athlete_name);
                     } else {
-                        // add the race to the said athlete's data
+                        
+                        // add time to athelete
+
                     }
                 }
             }
