@@ -1,3 +1,6 @@
 ra0001:jv state
 ra0002:jv timp
 ra0003:utah state
+ra0004:nxr southwest
+ra0005:divisionals 5A
+ra0006:bob firman
