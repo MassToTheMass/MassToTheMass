@@ -43,6 +43,8 @@ class AthleteStore {
                             athlete_name += current_name + " "; 
                         }
                     }
+                    int grade = std::stoi(parseLine(current_racer, ' ').at(3));
+                    std::string time = parseLine(current_racer, ' ').at(2);
                     
                     if (!checkForExistingAthlete(athlete_name)) {
                         athletes[athlete_name] = Athlete(athlete_name);
