@@ -53,7 +53,13 @@ int main(){
             std::cout << str::getUserRequest(str::ATHLETENAME) << std::endl;
             std::getline(std::cin, athleteName);
             system("clear");
-            athletes.getAthlete(athleteName);
+            Athlete* chosen_athlete = athletes.getAthlete(athleteName);
+
+            if (chosen_athlete != nullptr) {
+                std::cout << *chosen_athlete << std::endl;
+            } else {
+                std::cout << "There is no athlete with that name" << std::endl;
+            }
         }
 
         else if(choices == "all athletes"){ //display every athlete in every meet systematically for results comparison by standardized time
