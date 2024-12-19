@@ -1,5 +1,4 @@
 # raceConversion
-Access Website: https://masstothemass.github.io/raceConversion/
 
 After running the programming you are given a couple options:
 
